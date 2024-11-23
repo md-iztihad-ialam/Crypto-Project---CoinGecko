@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import fetchCoinData from "../../services/fetchCoinData";
 import { useQuery } from "@tanstack/react-query";
-import { CurrencyContext } from "../../context/CurrencyContext";
+//import { CurrencyContext } from "../../context/CurrencyContext";
+import currencyStore from "../../state/store";
 
 function CoinTable(){
 
-    const {currency} = useContext(CurrencyContext);
+    //const {currency} = useContext(CurrencyContext);
+    const {currency} = currencyStore();
 
     // useEffect(() => {
     //     //console.log("CoinTable component mounted!");
